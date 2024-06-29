@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
 
 .App-logo {
@@ -26,6 +27,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
 }
 
 @keyframes App-logo-spin {

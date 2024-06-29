@@ -1,0 +1,9 @@
+.App {
+    text-align: center;
+    padding: 20px;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+}
