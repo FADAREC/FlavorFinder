@@ -12,6 +12,7 @@ const App = () => {
         <div className="container">
             <h1 className="text-center my-4">Recipe Finder</h1>
             <SearchBar setRecipes={setRecipes} />
+            
             <RecipeList recipes={recipes} />
         </div>
     );
