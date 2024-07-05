@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
-import './App.css';
-import './styles/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import SearchBar from './components/SearchBar';
 import RecipeList from './components/RecipeList';
+import RecipeDetail from './components/RecipeDetail';
+import SearchBar from './components/SearchBar';
+import './App.css';
 
-const App = () => {
-    const [recipes, setRecipes] = useState([]);
+function App() {
+  const [recipes, setRecipes] = useState([]);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-    return (
-        <div className="container">
-            <h1 className="text-center my-4">FlavourFinder</h1>
-            <SearchBar setRecipes={setRecipes} />
-
-            <RecipeList recipes={recipes} />
-        </div>
-    );
-};
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>FlavourFinder</h1>
+        <SearchBar setRecipes={setRecipes} />
+      </header>
+      <RecipeList recipes={recipes} onSelectRecipe={setSelectedRecipe} />
+      {selectedRecipe && <RecipeDetail recipe={selectedRecipe} />}
+    </div>
+  );
+}
 
 export default App;
