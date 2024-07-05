@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
 const API_KEY = '3c569388b9124102a7ceb6a2915d20f1';
 const BASE_URL = 'https://api.spoonacular.com/recipes/';
 
